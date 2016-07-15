@@ -6,7 +6,7 @@
 {/if}
 <div class="header_user_info">
 	{if $is_logged}
-		<a class="logout" href="{$link->getPageLink('index', true, NULL, "mylogout")|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Log me out' mod='blockuserinfo'}">
+		<a class="logout" href="{$link->getPageLink('index', true, NULL, "mylogout")|replace:'/es/?':'/index.php?'|replace:'/en/?':'/index.php?'|escape:'html':'UTF-8'}" rel="nofollow" title="{l s='Log me out' mod='blockuserinfo'}">
 			{l s='Sign out' mod='blockuserinfo'}
 		</a>
 	{else}
